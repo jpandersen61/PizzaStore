@@ -29,6 +29,11 @@ namespace PizzaStore
             set { _deliveryCosts = value; }
         }
 
+        public override string ToString()
+        {
+            return $"Pizza: {p.Name} - TaxPct: {TaxPct} - Delivery cost: {DeliveryCosts} - Total: {CalculateTotalPrice()}";
+        }
+
         public double CalculateTotalPrice()
         {
             return p.Price * (1 + TaxPct / 100) + DeliveryCosts;
