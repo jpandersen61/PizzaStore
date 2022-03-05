@@ -14,6 +14,12 @@ namespace PizzaStore
             _name = "";
             _price = 0;
         }
+
+        public Pizza(string name, int price)
+        {
+            _name = name;
+            _price = price;
+        }
         public string Name
         {
             get { return _name; }

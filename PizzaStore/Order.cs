@@ -9,10 +9,11 @@ namespace PizzaStore
         double _taxPct;
         double _deliveryCosts;
         Pizza p;
+        Customer c;
 
-        public Order()
+        public Order(Pizza pizza, Customer customer)
         {
-            p = new Pizza();
+            p = pizza;
             TaxPct = 0.0;
             DeliveryCosts = 0.0;
         }
